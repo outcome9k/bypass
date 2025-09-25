@@ -1,29 +1,21 @@
 {
-"inbounds": [
-{
-"port": 8080,
-"protocol": "vless",
-"settings": {
-"clients": [
-{
-"id": "af9bde42-054f-49cc-b11a-0ba65bad9784",
-"level": 0
-}
-],
-"decryption": "none"
-},
-"streamSettings": {
-"network": "ws",
-"wsSettings": {
-"path": "/personal"
-}
-}
-}
-],
-"outbounds": [
-{
-"protocol": "freedom",
-"settings": {}
-}
-]
+  "inbounds": [{
+    "port": 8080,
+    "protocol": "vless",
+    "settings": {
+      "clients": [{
+        "id": "d43fd022-6d8e-4e8a-ba2a-81215d3e5c21"
+      }],
+      "decryption": "none"
+    },
+    "streamSettings": {
+      "network": "ws",
+      "wsSettings": {
+        "path": "/"
+      }
+    }
+  }],
+  "outbounds": [{
+    "protocol": "freedom"
+  }]
 }
