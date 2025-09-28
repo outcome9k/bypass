@@ -4,19 +4,30 @@
     "protocol": "vless",
     "settings": {
       "clients": [{
-        "id": "d43fd022-6d8e-4e8a-ba2a-81215d3e5c21"
+        "id": "d43fd022-6d8e-4e8a-ba2a-81215d3e5c21",
+        "level": 0,
+        "email": "user@cloudrun"
       }],
       "decryption": "none"
     },
     "streamSettings": {
       "network": "ws",
+      "security": "none",
       "wsSettings": {
-        "path": "/v2ray"
+        "path": "/video",
+        "headers": {
+          "Host": ""
+        }
       }
+    },
+    "sniffing": {
+      "enabled": true,
+      "destOverride": ["http", "tls"]
     }
   }],
   "outbounds": [{
-    "protocol": "freedom"
+    "protocol": "freedom",
+    "settings": {}
   }],
   "log": {
     "loglevel": "warning"
