@@ -11,11 +11,14 @@
     "streamSettings": {
       "network": "ws",
       "wsSettings": {
-        "path": "/"
+        "path": "/v2ray"
       }
     }
   }],
   "outbounds": [{
     "protocol": "freedom"
-  }]
+  }],
+  "log": {
+    "loglevel": "warning"
+  }
 }
