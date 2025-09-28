@@ -1,0 +1,21 @@
+name: Deploy v2ray to Cloud Run
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Deploy to Cloud Run
+      uses: google-github-actions/deploy-cloudrun@v0.10.0
+      with:
+        service: v2ray-service
+        image: gcr.io/${{ secrets.GCP_PROJECT }}/v2ray-proxy
+        credentials: ${{ secrets.GCP_CREDENTIALS }}
+        region: us-central1
+        flags: '--allow-unauthenticated --port=8080'
